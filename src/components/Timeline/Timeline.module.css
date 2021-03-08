@@ -1,0 +1,139 @@
+.steps {
+  --step-base: 0.75rem;
+  --step-my: calc(var(--step-base) * 2);
+
+  --steps-pl: calc(var(--step-base) * 4);
+  --steps-pl-half: calc(var(--steps-pl) / 2);
+
+  --step-dot-size: 20px;
+  --step-dot-size-half: calc(var(--step-dot-size) / 2);
+  --step-dot-color: rgb(209, 214, 230);
+
+  --time-line-size: 4px;
+  --time-line-size-half: calc(var(--time-line-size) / 2);
+
+  list-style-type: none;
+  margin: var(--step-my) 0;
+  padding: 0 2rem 0 var(--steps-pl);
+  position: relative;
+}
+
+.steps:not(.steps--single):before {
+  background-color: var(--step-dot-color);
+  content: '';
+  height: 100%;
+  position: absolute;
+  left: calc(var(--steps-pl-half) + var(--time-line-size-half));
+  top: 0;
+  width: var(--time-line-size);
+}
+
+.steps > :first-child:before,
+.steps > :last-child:before {
+  background-color: var(--color-bg-body);
+  content: '';
+  height: 50%;
+  right: 100%;
+  position: absolute;
+  width: var(--steps-pl);
+}
+
+.steps > :first-child:before {
+  top: 0;
+}
+
+.steps > :last-child:before {
+  bottom: 0;
+}
+
+.step {
+  position: relative;
+}
+
+.step:after {
+  background-color: var(--step-dot-color);
+  border-radius: 100%;
+  content: '';
+  height: var(--step-dot-size);
+  right: calc(
+    100% +
+      calc(
+        var(--steps-pl-half) - var(--time-line-size) - var(--step-dot-size-half)
+      )
+  );
+  position: absolute;
+  top: calc(50% - var(--step-dot-size-half));
+  width: var(--step-dot-size);
+}
+
+.step + .step {
+  margin-top: var(--step-my);
+}
+
+.content {
+  backface-visibility: hidden;
+  background-color: var(--color-bg-card);
+  border-radius: var(--size-border-radius);
+  box-shadow: var(--box-shadow);
+  padding: 1rem;
+  transform: translateY(0);
+  transition: box-shadow 0.25s ease, transform 0.25s ease;
+}
+
+.content:hover {
+  box-shadow: var(--box-shadow-active);
+  transform: translateY(-2px);
+}
+
+.content {
+  background-color: #fff;
+  border-radius: var(--size-border-radius);
+  box-shadow: var(--box-shadow);
+  padding: 1rem;
+  transform: translateY(0);
+  transition: box-shadow 0.25s ease, transform 0.25s ease;
+}
+
+.content:hover {
+  box-shadow: var(--box-shadow-active);
+  transform: translateY(-2px);
+}
+
+.countdown {
+  margin-bottom: 2rem;
+}
+
+.time {
+  font-weight: 700;
+  font-size: 1.5rem;
+  margin: 0 0 1rem;
+}
+
+.date {
+  font-size: 0.85rem;
+}
+
+.activities {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.activity {
+  display: flex;
+}
+
+.activity + .activity {
+  margin-top: 1rem;
+}
+
+.activity__icon {
+  display: inline-block;
+  margin-right: 0.5rem;
+}
+
+@media (min-width: 640px) {
+  .steps {
+    --step-base: 1rem;
+  }
+}

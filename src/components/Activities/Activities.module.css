@@ -1,0 +1,35 @@
+.container {
+  padding: 2rem;
+}
+
+.content {
+  background-color: #fff;
+  border-radius: var(--size-border-radius);
+  box-shadow: var(--box-shadow);
+  padding: 1rem;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: normal;
+  margin: 0 0 2rem;
+}
+
+.activities {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.activity {
+  display: flex;
+}
+
+.activity + .activity {
+  margin-top: 1rem;
+}
+
+.activity__icon {
+  display: inline-block;
+  margin-right: 0.5rem;
+}

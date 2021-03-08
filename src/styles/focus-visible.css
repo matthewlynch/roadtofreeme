@@ -1,0 +1,8 @@
+/* focus-within CSS see: https://github.com/WICG/focus-visible#usage */
+.js-focus-visible :focus:not(.focus-visible) {
+  outline: transparent;
+}
+
+/*[data-js-focus-visible] :focus:not([data-focus-visible-added]) {*/
+/*  outline: transparent;*/
+/*}*/

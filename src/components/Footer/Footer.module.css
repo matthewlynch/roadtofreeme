@@ -1,0 +1,23 @@
+.footer {
+  text-align: center;
+  padding: 2rem;
+}
+
+.copy + .copy {
+  margin-top: 1rem;
+}
+
+.link {
+  outline: transparent;
+}
+
+.link,
+.link:visited {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+.link:focus,
+.link:hover {
+  text-decoration: underline;
+}
