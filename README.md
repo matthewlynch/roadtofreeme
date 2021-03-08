@@ -27,3 +27,7 @@ Update the variables in the file and run the site in development mode
 ```sh
 yarn dev
 ```
+
+## Contributing
+
+Coming soon!
