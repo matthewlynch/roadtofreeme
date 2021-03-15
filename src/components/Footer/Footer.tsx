@@ -18,7 +18,7 @@ export function Footer() {
       </div>
       <div className={styles.copy}>
         Made by{' '}
-        <ExternalLink href="https://github.com/matthewlynch">
+        <ExternalLink href="https://twitter.com/matttlynch_">
           Matt Lynch
         </ExternalLink>
         ,{' '}
