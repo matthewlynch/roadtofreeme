@@ -40,7 +40,7 @@ export function CategoryFilter({
         <AccordionItemPanel className={styles.accordion__panel}>
           <fieldset className={styles.fieldset}>
             <legend className="sr-only">Categories:</legend>
-            <div className={styles.categories}>
+            <div className={styles.categories} data-testid="categories">
               {categories.map((category) => (
                 <Category
                   key={category._id}

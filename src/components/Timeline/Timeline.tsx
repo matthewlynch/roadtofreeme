@@ -33,7 +33,7 @@ interface TimelineStepProps {
 
 function TimelineStep({ step, countdown }: TimelineStepProps) {
   return (
-    <li className={styles.step}>
+    <li className={styles.step} data-testid="step">
       <section className={styles.content}>
         <Countdown
           key={`${step._id}:${step.date}`}
@@ -75,7 +75,7 @@ interface ActivityItemProps {
 
 function ActivityItem({ activity }: ActivityItemProps) {
   return (
-    <li className={styles.activity}>
+    <li className={styles.activity} data-testid="activity">
       <span className={styles.activity__icon} aria-hidden="true">
         {activity.emoji}
       </span>
