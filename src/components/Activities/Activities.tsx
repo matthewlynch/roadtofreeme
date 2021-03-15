@@ -10,7 +10,7 @@ interface ActivitiesProps {
 
 export function Activities({ activities }: ActivitiesProps) {
   return (
-    <section className={styles.container}>
+    <section className={styles.container} data-testid="activities">
       <div className={styles.content}>
         <header>
           <h2 className={styles.title}>What am I allowed to do now?</h2>
@@ -31,7 +31,11 @@ interface ActivityProps {
 
 function ActivityItem({ activity }: ActivityProps) {
   return (
-    <li key={activity._id} className={styles.activity}>
+    <li
+      key={activity._id}
+      className={styles.activity}
+      data-testid="allowed-activity"
+    >
       <span className={styles.activity__icon} aria-hidden="true">
         {activity.emoji}
       </span>
