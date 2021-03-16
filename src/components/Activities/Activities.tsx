@@ -6,14 +6,17 @@ import styles from './Activities.module.css';
 
 interface ActivitiesProps {
   activities: Activity[];
+  countryName: string;
 }
 
-export function Activities({ activities }: ActivitiesProps) {
+export function Activities({ activities, countryName }: ActivitiesProps) {
   return (
     <section className={styles.container} data-testid="activities">
       <div className={styles.content}>
         <header>
-          <h2 className={styles.title}>What am I allowed to do now?</h2>
+          <h2 className={styles.title}>
+            What am I allowed to do in {countryName} now?
+          </h2>
         </header>
         <ul className={styles.activities}>
           {activities.map((activity) => (

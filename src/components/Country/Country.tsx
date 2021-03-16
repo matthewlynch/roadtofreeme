@@ -45,7 +45,9 @@ export function Country({ page, navigation, categories }: CountryProps) {
         filteredCategories={filteredCategories}
         toggleCategory={handleToggleCategory}
       />
-      {activities.length > 0 && <Activities activities={activities} />}
+      {activities.length > 0 && (
+        <Activities activities={activities} countryName={page.countryName} />
+      )}
       {steps.length > 0 && (
         <Timeline name={`${page.countryName}`} timeline={steps} />
       )}
